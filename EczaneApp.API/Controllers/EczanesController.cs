@@ -22,6 +22,7 @@ namespace EczaneApp.API.Controllers
         }
 
         // GET: api/Eczanes
+        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Eczane>>> GetEczanes()
         {
