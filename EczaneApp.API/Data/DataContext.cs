@@ -10,5 +10,6 @@ namespace EczaneApp.API.Data
         }
 
         public DbSet<Eczane> Eczanes { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

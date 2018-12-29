@@ -3,11 +3,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using EczaneApp.API.Data;
 using EczaneApp.API.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace EczaneApp.API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class EczanesController : ControllerBase
@@ -27,6 +29,7 @@ namespace EczaneApp.API.Controllers
         }
 
         // GET: api/Eczanes/5
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<ActionResult<Eczane>> GetEczane(int id)
         {
