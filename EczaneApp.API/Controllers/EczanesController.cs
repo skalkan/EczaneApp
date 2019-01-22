@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EczaneApp.API.Controllers
 {
-    [Authorize]
+    // [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class EczanesController : ControllerBase
@@ -22,7 +22,6 @@ namespace EczaneApp.API.Controllers
         }
 
         // GET: api/Eczanes
-        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Eczane>>> GetEczanes()
         {
@@ -30,7 +29,6 @@ namespace EczaneApp.API.Controllers
         }
 
         // GET: api/Eczanes/5
-        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<ActionResult<Eczane>> GetEczane(int id)
         {

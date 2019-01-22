@@ -1,0 +1,18 @@
+GET https://localhost:5001/api/users HTTP/1.1
+
+###
+
+GET https://localhost:5001/api/users?Authorization=Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwidW5pcXVlX25hbWUiOiJsb2xhIiwibmJmIjoxNTQ4MTQ5MzEwLCJleHAiOjE1NDgyMzU3MTAsImlhdCI6MTU0ODE0OTMxMH0.1Hzhj_5_rXstjX93Bg4fk2SL2kZdO6Xzt_R-t8o8gOjzyE-E6Hq7Gu1c9xK8NFh2MmwN_tS0FI-qMSaTtYkfNA
+
+###
+GET https://localhost:5001/api/users/2 HTTP/1.1
+
+###
+
+POST https://localhost:5001/api/auth/login HTTP/1.1
+content-type: application/json
+
+{
+	"username": "lola",
+	"password": "password"
+}
