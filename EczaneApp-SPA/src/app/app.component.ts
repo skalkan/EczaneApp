@@ -10,6 +10,8 @@ export class AppComponent implements OnInit {
   // title = 'EczaneApp-SPA';
   jwtHelper = new JwtHelperService();
 
+  // test1 github multiple account
+
   constructor(private authService: AuthService) {}
 
   ngOnInit() {
